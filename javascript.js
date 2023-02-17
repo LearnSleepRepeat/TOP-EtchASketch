@@ -3,8 +3,9 @@
 //maybe add "perfect mode" that works with "click" instead of "mouseover";
 //add user-option to select grid-size;
 
+const colors = document.querySelectorAll('.colorDiv')
 const resetButton = document.querySelector('#resetButton');
-resetButton.addEventListener('click', () => {drawGrid()});
+resetButton.addEventListener('click', () => {drawGrid(); selectColor("black")});
 
 const container = document.querySelector('#container');
 
@@ -17,10 +18,10 @@ container.style.width = '1000px';
 const squareDivs = []
 
 let globalColor = "black";
+selectColor("black");
 
 drawGrid();
 
-const colors = document.querySelectorAll('.colorDiv')
 colors.forEach(function(color) {
     color.addEventListener("click", () => {selectColor(color.id)})
 })
@@ -45,7 +46,17 @@ function drawGrid() {
 }
 
 function selectColor(color) {
-    globalColor = color;
+    globalColor = color;  
+    if (color == "black") {
+    document.getElementById(color).style.border = "6px dotted white";
+    }
+    else {document.getElementById(color).style.border = "6px dotted black";}
+    for (color of colors) {
+        if (color.id != globalColor) {
+            document.getElementById(color.id).style.border = "1px solid black";
+        }
+    }
+
 }
 
 function changeColor(squareDiv, color) {
