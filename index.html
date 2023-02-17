@@ -1,0 +1,35 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>LearnSleepRepeat - Etch A Sketch</title>
+    <style>
+      .colorDiv {
+        width: 60px;
+        height: 60px;
+      }
+    </style>
+</head>
+<body>
+
+  <h1>
+    Etch a Sketch
+  </h1>
+
+  <button id="resetButton">Reset the Sketch</button>
+  <p></p>
+  <div id="selectColor">Select your Color:</div>
+  <div class="colorDiv" id="red" style="display: inline-block; background-color: red;"></div>
+  <div class="colorDiv" id="green" style="display: inline-block; background-color: green;"></div>
+  <div class="colorDiv" id="blue" style="display: inline-block; background-color: blue;"></div>
+  <div class="colorDiv" id="black" style="display: inline-block; background-color: black;"></div>
+  <div class="colorDiv" id="white" style="display: inline-block; background-color: white; border: 1px solid black">white</div>
+  <p></p>
+
+<div id="container"></div>
+
+<canvas id="canvas" style="display:none;"></canvas>
+
+<script type="text/javascript" src="javascript.js"></script>
+</body>
+</html>
