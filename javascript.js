@@ -16,7 +16,8 @@ container.style.width = '1000px';
 
 const squareDivs = []
 
-let globalColor = "black;"
+let globalColor = "black";
+
 drawGrid();
 
 const colors = document.querySelectorAll('.colorDiv')
@@ -36,7 +37,6 @@ function drawGrid() {
         squareDiv.style.width = "18px";
         squareDiv.style.height = "18px";
         squareDiv.style.border = "1px solid black";
-        //squareDiv.textContent = `${i}`;
         squareDivs.push(squareDiv);
         container.append(squareDiv);
         squareDiv.style.display = 'inline-block';
